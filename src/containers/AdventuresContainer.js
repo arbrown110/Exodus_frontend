@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {Route, Switch} from "react-router-dom"
 
-import {fetchAdventures} from '../actions/fetchAdventures'
+import {fetchAdventures} from '../actions/AdventuresActions'
 import AdventureForm from '../components/adventures/AdventureForm'
 import Adventures from '../components/adventures/Adventures'
 import Adventure from '../components/adventures/adventure'

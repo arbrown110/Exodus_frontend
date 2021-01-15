@@ -1,10 +1,10 @@
 import React, { component } from 'react';
-import Adventures from '../components/adventures/Adventures'
+import Adventure from '../components/adventures/Adventure'
 
 class Adventures extends Component {
     render() {
         const { adventures } = this.props
-    const adventures = adventures.map(adventure => {
+    const adv = adventures.map(adventure => {
       return (
         <Adventure key={adventure.id} adventure={adventure} />
       )
@@ -12,7 +12,7 @@ class Adventures extends Component {
     return (
       <ul>
         <h2 class="adventures">What is the topic for today?</h2>
-        {adventures}
+        {adv}
       </ul>
     )
   }
