@@ -7,6 +7,7 @@ import AdventureForm from '../components/AdventureForm'
 import Adventures from '../components/Adventures'
 import Adventure from '../components/adventure'
 import About from '../components/About'
+import Home from  '../components/Home'
 
 class AdventuresContainer extends React.Component {
     componentDidMount(){
@@ -19,8 +20,8 @@ class AdventuresContainer extends React.Component {
                 <Switch>
                     <Route path='/' component={Home} />
                     <Route path='/avdentures/new' component={AdventureForm}/>
-                    <Route path='adventures/:id' render={(routerProps) => <Adventure {...routerProps} vendors={this.props.vendors} /> } />
-                    <Route path='adventures' render={(routerProps) => <Adventures {...routerProps} vendors={this.props.vendors} /> } />
+                    <Route path='adventures/:id' render={(routerProps) => <Adventure {...routerProps} adventures={this.props.adventures} /> } />
+                    <Route path='adventures' render={(routerProps) => <Adventures {...routerProps} adventures={this.props.adventures} /> } />
                     <Route path='/About' component={About} />
                 </Switch>
             </div>
@@ -35,4 +36,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { featchadventures })(AdventuresContainer)
+export default connect(mapStateToProps, { fetchAdventures })(AdventuresContainer);
