@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import EventForm from '../components/EventForm'
-import Events from '../components/Events'
+import EventForm from '../components/events/EventForm'
+import Events from '../components/events/Events'
 import { deleteEvent } from '../actions/EventsActions'
 import { fetchAdventure} from '../actions/AdventuresActions'
 
@@ -28,4 +28,4 @@ class EventsContainer extends React.Component {
 //     }
 // }
 
-export default connect(mapStateToProps, { fetchAdventure,deleteEvent})(EventContainer);
+export default connect(mapStateToProps, { fetchAdventure,deleteEvent})(EventsContainer);

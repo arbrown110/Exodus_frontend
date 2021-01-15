@@ -1,5 +1,5 @@
 import React, { component } from 'react';
-import Adventure from '../components/adventures/Adventure'
+import Adventure from './Adventure'
 
 class Adventures extends Component {
     render() {
