@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import {Route, Switch} from "react-router-dom"
 
 import {fetchAdventures} from '../actions/fetchAdventures'
-import AdventureForm from '../components/AdventureForm'
-import Adventures from '../components/Adventures'
-import Adventure from '../components/adventure'
+import AdventureForm from '../components/adventures/AdventureForm'
+import Adventures from '../components/adventures/Adventures'
+import Adventure from '../components/adventures/adventure'
 import About from '../components/About'
 import Home from  '../components/Home'
 
