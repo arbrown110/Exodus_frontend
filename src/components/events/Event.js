@@ -7,7 +7,7 @@ const Event = ({ event, deleteEvent, adventure }) => {
         {event.title}
         <br/>
         <br/>
-        <Button  onClick={() => deleteEvent(event, adventure)}>Delete</Button>
+        <button onClick={() => deleteEvent(event, adventure)}>Delete</button>
     </div>
   )
 }

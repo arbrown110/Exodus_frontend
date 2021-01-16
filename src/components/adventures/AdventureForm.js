@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { addAdventure } from '../../actions/adventuresActions';
+import { addAdventure } from '../../actions/AdventuresActions';
 import { connect } from 'react-redux'
-import {Form, Button} from 'react-bootstrap';
+
 
 
 class AdventureInput extends Component {
@@ -21,7 +21,7 @@ class AdventureInput extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        thie.props.addAdventure(this.state);
+        this.props.addAdventure(this.state);
         this.setState({
             name: "",
             image_url: ""
@@ -30,7 +30,7 @@ class AdventureInput extends Component {
 
     render() {
         return(
-            <Form className="new-adventure-form" onSubmit={this.handleSubmit}>
+            <form className="new-adventure-form" onSubmit={this.handleSubmit}>
             <h2>Exodus : Sierra Leone</h2>
             
             <label>Topic's Name </label>
@@ -49,8 +49,8 @@ class AdventureInput extends Component {
                 onChange={this.handleChange} />
             
 
-            <Button type="submit">Add Entry</Button>
-        </Form>
+            <button type="submit">Add Entry</button>
+        </form>
         )
     }
 }

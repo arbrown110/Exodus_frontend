@@ -22,10 +22,10 @@ class EventsContainer extends React.Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         events: state.events
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        events: state.events
+    }
+}
 
 export default connect(mapStateToProps, { fetchAdventure,deleteEvent})(EventsContainer);

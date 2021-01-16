@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EventsContainer from '../../containers/EventsContainer'
 import { connect } from 'react-redux'
-import { deleteAdventure } from '../../actions/adventuresActions'
+import { deleteAdventure } from '../../actions/AdventuresActions'
 
 
   class Adventure extends Component {

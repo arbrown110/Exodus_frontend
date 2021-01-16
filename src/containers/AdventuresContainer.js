@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {Route, Switch} from "react-router-dom"
 
 import {fetchAdventures} from '../actions/AdventuresActions'
 import AdventureForm from '../components/adventures/AdventureForm'
 import Adventures from '../components/adventures/Adventures'
-import Adventure from '../components/adventures/adventure'
-import About from '../components/About'
-import Home from  '../components/Home'
+import Adventure from '../components/adventures/Adventure'
+import About from '../components/stateless/About'
+import Home from  '../components/stateless/Home'
 
-class AdventuresContainer extends React.Component {
+class AdventuresContainer extends Component {
     componentDidMount(){
         this.props.fetchAdventures()
     }

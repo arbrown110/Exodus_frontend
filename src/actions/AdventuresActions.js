@@ -3,7 +3,7 @@
 export const fetchAdventures = () => {
     return dispatch => {
         dispatch({type: 'LOADING_ADVENTURES'})
-       return fetch('api/v1/adventures')
+       return fetch(`api/v1/adventures`)
         .then(res => res.json())
         .then(adventures => dispatch({type: 'ADVENTURES_LOADED', payload: adventures})) 
     }
@@ -15,7 +15,7 @@ export const fetchAdventures = () => {
 export const fetchAdventure = id => {
     return (dispatch) => {
         dispatch({type: 'LOADING_ADVENTURES'})
-        return fetch('/api/v1/adventures/${id}')
+        return fetch(`/api/v1/adventures`)
         .then(res => res.json())
         .then(adventure => dispatch({type: 'ADVENTURE_LOADED', payload: adventure}))
     }
@@ -34,7 +34,7 @@ export const addAdventure = adventureForm => {
         body: JSON.stringify(adventureForm)
     }
     return dispatch => {
-        fetch('/api/v1/adventures', data)
+        fetch(`/api/v1/adventures`, data)
         .then(res => res.json())
         .then(adventure => dispatch({
             type: 'CREATE_ADVENTURE',
@@ -55,7 +55,7 @@ export const deleteAdventure = adventure_id =>{
         }
     }
     return dispatch => {
-        fetch('/api/v1/${adventure_id', data)
+        fetch(`/api/v1/${adventure_id}`, data)
         .then(res => res.json())
         .then(adventure => dispatch({
             type: 'DELETE_ADVENTURE',

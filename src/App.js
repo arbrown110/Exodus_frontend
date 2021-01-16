@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import React from 'react;'
-import { connect } from 'react-redux'
+import React from 'react'
+import Router from './component/stateless/Router'
 import EventsContainer from './containers/EventsContainer'
 import AdventuresContainer from './containers/AdventuresContainer'
 import './App.css';
@@ -11,6 +10,7 @@ class App extends React.Component {
       <div className="App">
         <AdventuresContainer />
         <EventsContainer />
+        <Router />
       </div>
     )
   }

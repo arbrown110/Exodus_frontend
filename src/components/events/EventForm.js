@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addEvent } from '../../actions/eventsActions'
-import {Form, Button} from 'react-bootstrap';
-class EventInput extends Component {
+import { addEvent } from '../../actions/EventsActions'
+
+class EventForm extends Component {
     constructor() {
       super()
       this.state = {
@@ -31,15 +31,17 @@ class EventInput extends Component {
 
     render() {
         return (
-            <Form className="new-event-form" onSubmit={(e) =>this.handleSubmit(e)}>
+            <form
+             className="new-event-form" onSubmit={(e) =>this.handleSubmit(e)}>
               <label >Add Event:</label>
               <input placeholder="Add a new entry title.." id="title" required value={this.state.title} onChange={(e) => this.handleChange(e)} />
             
-            <Button type="submit">Add Event</Button>
+            <button type="submit">Add Event</button>
             <hr/>
-          </Form>
+          </form
+          >
         )
     };
 }
 
-export default connect(null, {addEvent})(EventInput);
+export default connect(null, { addEvent })(EventForm);

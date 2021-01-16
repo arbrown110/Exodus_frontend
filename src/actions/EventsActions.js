@@ -11,9 +11,9 @@ export const addEvent = ( event, adventure ) => {
         },
         body: JSON.stringify(event)
     }
-
+// problem
     return dispatch => {
-        fetch('/api/v1/adventures/${adventure.id}/events', data)
+        fetch(`/api/v1/adventures/${adventure.id}/events`, data)
         .then(res => res.json())
         .then(event => {
             let result = {event, adventure}
@@ -35,11 +35,11 @@ export const deleteEvent = ( event, adventure ) => {
             'Content-Type': 'applciation/json'
         }
     }
-
+//problem
     return dispatch => {
-        fetch('/api/v1/${adventure.id}/events/${event.id', data)
-        .then(rep => res.json())
-        .then(task => {
+        fetch(`/api/v1/${adventure.id}/events`, data)
+        .then(res => res.json())
+        .then(event => {
             let result = {event, adventure}
             dispatch({
                 type: 'DELETE_EVENT',
