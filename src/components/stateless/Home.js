@@ -1,4 +1,5 @@
 import React from 'react';
+import mama from './components/stateless/mama'
 
 const Home = () => {
     return (
@@ -12,8 +13,9 @@ const Home = () => {
             Home
             <br>
             </br>
+            <img src={mama} alt="Image" height={900} width={1200}/>
+
             
-            https://media.giphy.com/media/52EYoJissQvBjUDE17/giphy.gif
         </div>
     );
 };

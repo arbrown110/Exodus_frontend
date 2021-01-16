@@ -13,7 +13,7 @@ export const addEvent = ( event, adventure ) => {
     }
 // problem
     return dispatch => {
-        fetch(`/api/v1/adventures/${adventure.id}/events`, data)
+        fetch(`/adventures/${adventure.id}/events`, data)
         .then(res => res.json())
         .then(event => {
             let result = {event, adventure}
@@ -37,7 +37,7 @@ export const deleteEvent = ( event, adventure ) => {
     }
 //problem
     return dispatch => {
-        fetch(`/api/v1/${adventure.id}/events`, data)
+        fetch(`/${adventure.id}/events`, data)
         .then(res => res.json())
         .then(event => {
             let result = {event, adventure}
