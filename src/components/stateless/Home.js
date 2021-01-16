@@ -1,5 +1,5 @@
 import React from 'react';
-import mama from './components/stateless/mama'
+
 
 const Home = () => {
     return (
@@ -9,11 +9,14 @@ const Home = () => {
 
             <br>
             </br>
+            <content>
 
-            Home
+           
+            </content>
+
             <br>
             </br>
-            <img src={mama} alt="Image" height={900} width={1200}/>
+            {/* <img src={mama} alt="Image" height={900} width={1200}/> */}
 
             
         </div>
